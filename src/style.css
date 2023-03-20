@@ -23,9 +23,6 @@ li a:hover {
     background-color: #111;
 }
 
-input {
-    margin-top: 15PX;
-}
 .container {
     background-image: url(Imagenes/background.jpeg);
     display: flex;
