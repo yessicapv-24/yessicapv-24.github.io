@@ -1,6 +1,7 @@
 import validator from "./validator";
 
-function validar() {
+let enviar = document.querySelector('#enviar');
+enviar.addEventListener('click', function () {
   var numTarjeta = document.getElementById("numTarjeta").value;
   if (numTarjeta.length ===0) {
     alert("Escriba su número de tarjeta");
@@ -33,11 +34,12 @@ function validar() {
   } else {
     alert("Tarjeta inválida");
   }
-}
- 
-function rellenar(element) {
-  if (element.value.length >  element.maxLength) 
-    element.value = element.value.slice(0, element.maxLength);
+});
 
-  numero.innerHTML = validator.maskify(element.value);
-}
+let numTarjeta = document.querySelector('#numTarjeta');
+numTarjeta.addEventListener('input', function () {
+  if (numTarjeta.value.length >  numTarjeta.maxLength) 
+  numTarjeta.value = numTarjeta.value.slice(0, numTarjeta.maxLength);
+
+  numero.innerHTML = validator.maskify(numTarjeta.value);
+});
