@@ -27,6 +27,9 @@ enviar.addEventListener('click', function () {
     return;
   }
 
+  .navbar input {
+    margin-top: 15px;
+  }
   var numTarjetaValid = validator.isValid(numTarjeta);
 
   if (numTarjetaValid === true) {

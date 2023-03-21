@@ -22,7 +22,9 @@ li a {
 li a:hover {
     background-color: #111;
 }
-
+.busqueda {
+    margin-top: 15px;
+}
 .container {
     background-image: url(Imagenes/background.jpeg);
     display: flex;
