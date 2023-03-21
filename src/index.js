@@ -27,9 +27,6 @@ enviar.addEventListener('click', function () {
     return;
   }
 
-  .navbar input {
-    margin-top: 15px;
-  }
   var numTarjetaValid = validator.isValid(numTarjeta);
 
   if (numTarjetaValid === true) {
@@ -43,6 +40,12 @@ let numTarjeta = document.querySelector('#numTarjeta');
 numTarjeta.addEventListener('input', function () {
   if (numTarjeta.value.length >  numTarjeta.maxLength) 
   numTarjeta.value = numTarjeta.value.slice(0, numTarjeta.maxLength);
-
+  let numero = document.querySelector('#numero');
   numero.innerHTML = validator.maskify(numTarjeta.value);
+});
+
+let propietario = document.querySelector('#propietario');
+propietario.addEventListener('input', function () {
+  let nombre = document.querySelector('#nombre');
+  nombre.innerHTML = validator.maskify(propietario.value);
 });
