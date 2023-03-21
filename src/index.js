@@ -46,6 +46,6 @@ numTarjeta.addEventListener('input', function () {
 
 let propietario = document.querySelector('#propietario');
 propietario.addEventListener('input', function () {
-  let nombre = document.querySelector('#nombre');
-  nombre.innerHTML = validator.maskify(propietario.value);
+  let nombre = document.querySelector('#nombreTarjeta');
+  nombre.innerHTML = propietario.value;
 });
